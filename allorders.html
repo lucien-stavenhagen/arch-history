@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/allorders.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i&display=swap"
+            rel="stylesheet">
+        <title>Doric Order</title>
+    </head>
+
+    <body>
+        <div class="sidelabel">
+        </div>
+        <header>
+            <div id="menubar">
+                <div id="mbcontainer">
+                    <a href="/orders.html">Home</a>
+                    <a href="#" id="doric-button">Doric</a>
+                    <a href="#" id="ionic-button">Ionic</a>
+                    <a href="#" id="corinthian-button">Corinthian</a>
+                </div>
+            </div>
+            </div>
+            <div id="announce">
+                <p id="preface"></p>
+            </div>
+        </header>
+        <section id="welcome">
+        </section>
+        <section id="main-section">
+        </section>
+    </body>
+    <template id="order-headers-temp">
+        <p><span id="dropcap"></span></p>
+    </template>
+
+    <template id="order-block-temp">
+        <div class="mb-container">
+            <div class="description">
+                <div class="paragraph-header"></div>
+                <p></p>
+            </div>
+            <div class="figure">
+                <figure>
+                    <a target="_blank"><img></a>
+                    <figcaption><small></small></figcaption>
+                </figure>
+            </div>
+        </div>
+    </template>
+    <script>
+        const entriesFactory = () => {
+            const entries = {
+                ionic: {
+                    preface: "The Ionic Order",
+                    welcome: {
+                        first: "T",
+                        rest: "he Ionic Order is represented by many fine examples still standing today. and it also rules."
+                    },
+                    elist: [
+                        {
+                            switch: true,
+                            blocktype: "main-block-red",
+                            header: "Ionic Building 0",
+                            description: "Placeholder text for ionic building 0",
+                            image: "./img/copy-of-p1010068-2_athens-greece.jpg",
+                            caption: "I think this is the erechtheon"
+                        },
+                        {
+                            switch: false,
+                            blocktype: "main-block-green",
+                            header: "Ionic Building 1",
+                            description: "Placeholder text for ionic building 1",
+                            image: "./img/erechtheon.jpg",
+                            caption: "nice view of erechtheon"
+                        },
+                        {
+                            switch: true,
+                            blocktype: "main-block-blue",
+                            header: "Ionic Building 2",
+                            description: "Placeholder text for ionic building 2",
+                            image: "./img/fig08-06-ionic.jpg",
+                            caption: "another view of erechtheon"
+                        }, {
+                            switch: false,
+                            blocktype: "main-block-red",
+                            header: "Ionic Building 3",
+                            description: "Placeholder text for ionic building 3",
+                            image: "./img/ionic1.jpg",
+                            caption: "closeup of an ionic capital"
+                        }
+                    ]
+                },
+                doric: {
+                    preface: "The Doric Order",
+                    welcome: {
+                        first: "T",
+                        rest: "he Doric Order is represented by many fine examples still standing today."
+                    },
+                    elist: [
+                        {
+                            switch: true,
+                            blocktype: "main-block-blue",
+                            header: "The Temple of Hera",
+                            description: `Maecenas posuere pretium lorem, nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat, sit amet malesuada quam iaculis.`,
+                            image: "./img/templeofheradoric.jpg",
+                            caption: "Illustration of a really stout example of the Doric order"
+                        },
+                        {
+                            switch: false,
+                            blocktype: "main-block-red",
+                            header: "The Parthenon 1",
+                            description: `Maecenas posuere pretium lorem, nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat, sit amet malesuada quam iaculis.`,
+                            image: "./img/Parthenon-Athens.jpg",
+                            caption: "The majestic and mysterious Parthenon in Athens, Greece. <cite>Encyclopedia Britannica</cite>"
+                        },
+                        {
+                            switch: true,
+                            blocktype: "main-block-blue",
+                            header: "The Parthenon 2",
+                            description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
+                            image: "./img/parth2018_11.jpg",
+                            caption: "Closeup of capital"
+                        },
+                        {
+                            switch: false,
+                            blocktype: "main-block-green",
+                            header: "The Parthenon 3",
+                            description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
+                            image: "./img/parth2018_26.jpg",
+                            caption: "Closeup of capital with upper part of column"
+                        },
+                        {
+                            switch: true,
+                            blocktype: "main-block-red",
+                            header: "The Parthenon 4",
+                            description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
+                            image: "./img/parth2018_31.jpg",
+                            caption: "Closeup of entablature"
+                        }
+                    ]
+                },
+                corinthian: {
+                    preface: "The Corinthian Order",
+                    welcome: {
+                        first: "T",
+                        rest: "he Corinthian Order is very flowery. For now I'll just type somethin in leu of lorem ipsum, mainly just to test the layout"
+                    },
+                    elist: [
+                        {
+                            switch: false,
+                            blocktype: "main-block-blue",
+                            header: "Ceiling at Karnak",
+                            description: `This is basically just a bonus shot of the columns at KarnaK. almost corinthian looking`,
+                            image: "./img/columns-of-the-hypostyle-hall-of-Karnaks-temple-in-Luxor-Egypt.jpg",
+                            caption: "whoa, awesome ceiling at Karnak!"
+
+                        },
+                        {
+                            switch: true,
+                            blocktype: "main-block-red",
+                            header: "Corinthian capital",
+                            description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
+                            image: "./img/corinthian-capital.jpg",
+                            caption: "ancient capital"
+
+                        },
+                        {
+                            switch: false,
+                            blocktype: "main-block-blue",
+                            header: "Olympieion at Athens",
+                            description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
+                            image: "./img/OlympieionatAthens.jpg",
+                            caption: "temple of olympus?"
+
+                        }
+                    ]
+                }
+            }
+            const addPreface = (preface) => {
+                document.getElementById("preface").innerHTML = preface;
+            }
+            const addWelcome = (welcome) => {
+                const display = document.getElementById("welcome");
+                while (display.firstChild) {
+                    display.removeChild(display.firstChild);
+                }
+                const t = document.getElementById("order-headers-temp");
+                const clone = document.importNode(t.content, true);
+                const drop = clone.getElementById("dropcap");
+                drop.innerHTML = welcome.first;
+                const par = clone.querySelector("p");
+                par.appendChild(document.createTextNode(welcome.rest));
+                display.appendChild(clone);
+            }
+            const addEntry = (entry) => {
+                const display = document.getElementById("main-section");
+                const t = document.getElementById("order-block-temp");
+                const clone = document.importNode(t.content, true);
+                clone.querySelector(".mb-container").classList.add(entry.blocktype);
+                const header = clone.querySelector(".paragraph-header");
+                header.innerHTML = entry.header;
+                const description = clone.querySelector(".description p");
+                description.innerHTML = entry.description;
+                const anchor = clone.querySelector(".figure a");
+                anchor.setAttribute("href", entry.image);
+                const image = clone.querySelector(".figure img");
+                image.setAttribute("src", entry.image);
+                const caption = clone.querySelector(".figure small");
+                caption.innerHTML = entry.caption;
+                if (entry.switch) {
+                    clone.querySelector(".description").classList.add("right");
+                    clone.querySelector(".figure").classList.add("left");
+                }
+                display.appendChild(clone);
+            }
+
+            const addEntries = (entrylist, clear) => {
+
+                if (clear) {
+                    const display = document.getElementById("main-section");
+                    while (display.firstChild) {
+                        display.removeChild(display.firstChild)
+                    }
+                }
+                addPreface(entrylist.preface);
+                addWelcome(entrylist.welcome);
+                for (let i = 0; i < entrylist.elist.length; i++) {
+                    addEntry(entrylist.elist[i]);
+
+                }
+            }
+            const addDoricEntries = () => {
+                addEntries(entries.doric, true);
+            }
+            const addIonicEntries = () => {
+                addEntries(entries.ionic, true);
+            }
+            const addCorinthianEntries = () => {
+                addEntries(entries.corinthian, true);
+            }
+            return { addDoricEntries, addCorinthianEntries, addIonicEntries }
+        }
+        const doAll = entriesFactory();
+        const doricButton = document.getElementById("doric-button");
+        doricButton.addEventListener("click", doAll.addDoricEntries);
+        const ionicButton = document.getElementById("ionic-button");
+        ionicButton.addEventListener("click", doAll.addIonicEntries);
+        const corinthianButton = document.getElementById("corinthian-button");
+        corinthianButton.addEventListener("click", doAll.addCorinthianEntries);
+
+        doAll.addDoricEntries();
+//        doAll.addCorinthianEntries()
+    </script>
+
+</html>

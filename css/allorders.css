@@ -1,0 +1,253 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto Slab", serif;
+}
+
+hr {
+  width: 40%;
+  margin: 2rem auto;
+}
+
+.sidelabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 260px;
+  width: 60px;
+  background-color: rgba(15, 61, 88, 0.3);
+}
+
+#menubar {
+  width: 85%;
+  margin: auto;
+  font-size: 0;
+  /* hack to get rid of whitespace text node */
+  list-style-type: none;
+}
+
+#menubar #mbcontainer {
+  float: right;
+}
+
+#menubar #mbcontainer a {
+  display: inline-block;
+  padding: 0.9rem;
+  margin: 0 0 0 1px;
+  background-color: #eeeeee;
+  font-size: initial;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+#menubar #mbcontainer a:hover {
+  background-color: #cccccc;
+}
+
+#announce {
+  width: 85%;
+  margin: auto;
+  padding: 1rem;
+}
+
+#announce #preface {
+  font-size: 4rem;
+  font-weight: 300;
+  display: inline-block;
+}
+
+#welcome {
+  width: 85%;
+  background-color: rgba(156, 16, 126, 0.05);
+  margin: 6rem auto 2px auto;
+  padding: 1rem;
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+  overflow: auto;
+}
+
+#welcome #dropcap {
+  font-size: 400%;
+  float: left;
+  font-weight: 300;
+  line-height: 90%;
+  padding: 0 1rem 0 0;
+  color: rgba(15, 61, 88, 0.3);
+}
+
+#welcome #boldme {
+  font-weight: 400;
+}
+
+.main-block-red,
+.main-block-blue,
+.main-block-green {
+  width: 85%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-block-red {
+  background-color: rgba(156, 49, 16, 0.05);
+}
+
+.main-block-blue {
+  background-color: rgba(16, 72, 156, 0.05);
+}
+
+.main-block-green {
+  background-color: rgba(16, 156, 58, 0.05);
+}
+
+.description {
+  font-weight: 300;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 2.5rem;
+}
+
+.description .paragraph-header {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.figure {
+  text-align: center;
+}
+
+.figure figure {
+  margin: 2.5rem;
+  padding: 0;
+}
+
+.figure figcaption {
+  font-weight: 300;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.figure a {
+  text-decoration: none;
+}
+
+.figure a:hover {
+  color: rgba(131, 20, 20, 0.925);
+  font-weight: 400;
+}
+
+.figure img {
+  max-width: 100%;
+  max-height: 650px;
+}
+
+.left {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.right {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+@media screen and (max-width: 768px) {
+  .sidelabel {
+    width: 40px;
+    height: 200px;
+  }
+  #announce #preface {
+    font-size: 2.5rem;
+  }
+  #welcome {
+    font-size: 1.2rem;
+    line-height: normal;
+  }
+  #welcome #dropcap {
+    font-size: 200%;
+    padding: 5px;
+  }
+  .main-block-red,
+  .main-block-blue,
+  .main-block-green {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .left {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .right {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .description {
+    margin: 0.5rem;
+  }
+  .figure figure {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #menubar #mbcontainer {
+    float: none;
+  }
+  #menubar #mbcontainer a {
+    display: block;
+    text-align: center;
+    margin: 0 0 1px 0;
+  }
+  .sidelabel {
+    display: none;
+  }
+  #announce {
+    text-align: center;
+  }
+  .main-block-red,
+  .main-block-blue,
+  .main-block-green,
+  #menubar,
+  #welcome {
+    width: 98%;
+  }
+  #welcome {
+    margin: 1rem auto 2px auto;
+  }
+}
+/*# sourceMappingURL=allorders.css.map */

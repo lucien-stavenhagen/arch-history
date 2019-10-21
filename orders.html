@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/orders.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i&display=swap"
+            rel="stylesheet">
+        <title>Preface</title>
+    </head>
+
+    <body>
+        <div class="sidelabel">
+        </div>
+        <header>
+            <div id="menubar">
+                <div id="mbcontainer">
+                    <a href="#">Home</a>
+                    <a href="/allorders.html">Show Orders</a>
+                </div>
+            </div>
+            <div id="announce">
+                <p id="preface">The Orders</p>
+            </div>
+        </header>
+        <section id="welcome">
+            <p><span id="dropcap">T</span><span id="boldme">here is perhaps no other property in classical architecture
+                    as
+                    distinctive and
+                    well-known as the three orders.</span> In architecture, <dfn>Order</dfn>
+                is the
+                label we use for a
+                description of a particular style of building; we can think of the classical orders as simply decorative
+                variants of the ancient <dfn>Post and Lintel</dfn> system, but their particular attraction lies in the
+                simple, but
+                beautiful, innovations made in classical antiquity. This page will present the three orders of
+                classical architecture - the <dfn>Dorian, Ionian and Corinthian</dfn> - and give summaries and examples
+                of each in turn.
+            </p>
+        </section>
+        <section id="main-section">
+        </section>
+    </body>
+    <template id="order-block-temp">
+        <div class="mb-container">
+            <div class="description">
+                <div class="paragraph-header"></div>
+                <p></p>
+            </div>
+            <div class="figure">
+                <figure>
+                    <img>
+                    <figcaption><small><a target="_blank"></a></small></figcaption>
+                </figure>
+            </div>
+        </div>
+    </template>
+    <script>
+        const entriesFactory = () => {
+            const entries = [
+                {
+                    blocktype: "main-block-doric",
+                    header: "The Doric Order",
+                    description: `The oldest of the Greek orders, the Doric was described by Vetruvius as the masculine one. The capital is squat and stout, unadorned with extra decoration, and gives the impression of an almost utilitarian strength and sense of purpose.The Doric column is similarly stocky, almost muscular, and rests directly on the stylobate of the temple with no base.The entablature features a frieze with alternating triglyphs and metopes, on top of a similarly plain architrave.The Doric order predominated in Greece from the late seventh through the early fifth centuries BCE.`,
+                    image: "./img/829429350.gif",
+                    caption: "Doric Order. N.d. Vulgarie. Web. 14 Dec. 2014."
+                },
+                {
+                    blocktype: "main-block-ionic",
+                    header: "The Ionic Order",
+                    description: `Vetruvius again offers us an anthropomorphic insight into the Ionic order, describing it as the more matronly of the orders. Its most distinctive feature is the four <dfn>volutes</dfn> protruding from the capital. The columns themselves are thinner and more graceful than the Doric, and typically stand atop a stack of disks on the stylobate. The entablature features a running frieze of continuous sculpture as well as a more layered appearance to the architrave. The Ionic order appeared in Ionia in the mid-sixth century BCE. `,
+                    image: "./img/783869627.jpg",
+                    caption: "Ionic Order. N.d. Ionic Order. Web. 14 Dec. 2014."
+                },
+                {
+                    blocktype: "main-block-corinthian",
+                    header: "The Corinthian Order",
+                    description: `The Corinthian order was the latest and most ornate of the orders, appearing first in the Greek city-state of Corinth. The earliest known Corinthian capital comes from the temple of Apollo Epicurius at Bassae and dates to c. 427 BCE. The most prominent feature is the elaborate, flowery carvings of the <dfn>Acanthus</dfn> leaf present all the way around on the capital. The columns and entablature are similar to those of the Ionic order. Vetruvius suggested that it was the maiden of the three. The Ionic order was a favorite of the Romans, with the Pantheon in Rome being a prime example.`,
+                    image: "./img/corinthian.jpg",
+                    caption: "Drawing for <cite>Dictionary of Architecture and Landscape Architecture (2006)</cite>."
+                }
+
+            ];
+
+            const addEntry = (entry) => {
+                const display = document.getElementById("main-section");
+                const t = document.getElementById("order-block-temp");
+                const clone = document.importNode(t.content, true);
+                clone.querySelector(".mb-container").classList.add(entry.blocktype);
+                const header = clone.querySelector(".paragraph-header");
+                header.innerHTML = entry.header;
+                const description = clone.querySelector(".description p");
+                description.innerHTML = entry.description;
+                const image = clone.querySelector(".figure img");
+                image.setAttribute("src", entry.image);
+                //const caption = clone.querySelector(".figure small");
+                const anchor = clone.querySelector(".figure a");
+                anchor.setAttribute("href", entry.image);
+                anchor.innerHTML = entry.caption;
+                display.appendChild(clone);
+            }
+
+            const addEntries = () => {
+                for (let i = 0; i < entries.length; i++) {
+                    addEntry(entries[i]);
+
+                }
+            }
+            return { addEntries }
+        }
+        const doAll = entriesFactory();
+        doAll.addEntries();
+    </script>
+
+</html>
