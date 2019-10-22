@@ -270,16 +270,16 @@
                     let caption = clone.querySelector(".figure small");
                     caption.innerHTML = entry.images[0].caption;
 
+                    let figcontainer = clone.querySelector(".figure");
                     for (let i = 1; i < entry.images.length; i++) {
-                        let figure = clone.querySelector(".figure")
-                        let newfig = figure.cloneNode(true);
-                        anchor = newfig.querySelector(".figure a");
+                        let newfig = figcontainer.querySelector("figure").cloneNode(true)
+                        anchor = newfig.querySelector("figure a");
                         anchor.setAttribute("href", entry.images[i].image);
-                        image = newfig.querySelector(".figure img");
+                        image = newfig.querySelector("figure img");
                         image.setAttribute("src", entry.images[i].image);
-                        caption = newfig.querySelector(".figure small");
+                        caption = newfig.querySelector("figure small");
                         caption.innerHTML = entry.images[i].caption;
-                        figure.appendChild(newfig);
+                        figcontainer.appendChild(newfig);
                     }
                 } else {
                     let caption = clone.querySelector(".figure small");
