@@ -19,7 +19,7 @@
         <header>
             <div id="menubar">
                 <div id="mbcontainer">
-                    <a href="/orders.html">Home</a>
+                    <a href="/orders.html">Back To Index</a>
                     <a href="#" id="doric-button">Doric</a>
                     <a href="#" id="ionic-button">Ionic</a>
                     <a href="#" id="corinthian-button">Corinthian</a>
@@ -68,31 +68,47 @@
                             blocktype: "main-block-red",
                             header: "Ionic Building 0",
                             description: "Placeholder text for ionic building 0",
-                            image: "./img/copy-of-p1010068-2_athens-greece.jpg",
-                            caption: "I think this is the erechtheon"
+                            images: [
+                                {
+                                    image: "./img/copy-of-p1010068-2_athens-greece.jpg",
+                                    caption: "I think this is the erechtheon"
+                                }
+                            ],
                         },
                         {
                             switch: false,
                             blocktype: "main-block-green",
                             header: "Ionic Building 1",
                             description: "Placeholder text for ionic building 1",
-                            image: "./img/erechtheon.jpg",
-                            caption: "nice view of erechtheon"
+                            images: [
+                                {
+                                    image: "./img/erechtheon.jpg",
+                                    caption: "nice view of erechtheon"
+                                }
+                            ]
                         },
                         {
                             switch: true,
                             blocktype: "main-block-blue",
                             header: "Ionic Building 2",
                             description: "Placeholder text for ionic building 2",
-                            image: "./img/fig08-06-ionic.jpg",
-                            caption: "another view of erechtheon"
+                            images: [
+                                {
+                                    image: "./img/fig08-06-ionic.jpg",
+                                    caption: "another view of erechtheon"
+                                }
+                            ]
                         }, {
                             switch: false,
                             blocktype: "main-block-red",
                             header: "Ionic Building 3",
                             description: "Placeholder text for ionic building 3",
-                            image: "./img/ionic1.jpg",
-                            caption: "closeup of an ionic capital"
+                            images: [
+                                {
+                                    image: "./img/ionic1.jpg",
+                                    caption: "closeup of an ionic capital"
+                                }
+                            ]
                         }
                     ]
                 },
@@ -104,45 +120,71 @@
                     },
                     elist: [
                         {
+                            switch: false,
+                            blocktype: "main-block-green",
+                            header: "The Temple of Hephaistus, Athens",
+                            description: `The Temple of Hephaistos is a little less well-known than more famous examples like the Parthenon, but it's the most well-preserved Doric temple in Greece. Its long history of multiple uses is partly responsible for its state of preservation; it served as the Greek Orthodox church of Saint George Akamates, starting in the 7th century. It only fell into disuse for that purpose in 1834 - a tenure of approximately 1200 years of continuous use into modern times. The building features a <a target="_blank" href="https://en.wikipedia.org/wiki/Portico">pronaos</a>, or porch, a <a target="_blank" href="https://en.wikipedia.org/wiki/Portico">cella</a> and an <a target="_blank" href="https://en.wikipedia.org/wiki/Opisthodomos">opisthodomos</a>, both of which are decorated with Ionic friezes rather than the triglyphs more typical of Doric entablature.`,
+                            images: [
+                                {
+                                    image: "img/Hephaistos_temple_2006.jpg",
+                                    caption: `By Tommi Nikkilä - <span class="int-own-work" lang="en">Own work</span>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a target="_blank" href="https://commons.wikimedia.org/w/index.php?curid=1965341">Link</a>`
+                                }
+                            ]
+                        },
+                        {
                             switch: true,
                             blocktype: "main-block-blue",
-                            header: "The Temple of Hera",
+                            header: "The Temple of Hera II at Paestum",
                             description: `Maecenas posuere pretium lorem, nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat, sit amet malesuada quam iaculis.`,
-                            image: "./img/templeofheradoric.jpg",
-                            caption: "Illustration of a really stout example of the Doric order"
+                            images: [
+                                {
+                                    image: "./img/templeofheradoric.jpg",
+                                    caption: "Illustration of a really stout example of the Doric order"
+                                }
+                            ]
                         },
                         {
                             switch: false,
                             blocktype: "main-block-red",
                             header: "The Parthenon 1",
                             description: `Maecenas posuere pretium lorem, nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat, sit amet malesuada quam iaculis.`,
-                            image: "./img/Parthenon-Athens.jpg",
-                            caption: "The majestic and mysterious Parthenon in Athens, Greece. <cite>Encyclopedia Britannica</cite>"
+                            images: [
+                                {
+                                    image: "./img/Parthenon-Athens.jpg",
+                                    caption: "The majestic and mysterious Parthenon in Athens, Greece. <cite>Encyclopedia Britannica</cite>"
+                                },
+                                {
+                                    image: "./img/parth2018_11.jpg",
+                                    caption: "Closeup of capital"
+                                }
+
+                            ]
                         },
                         {
                             switch: true,
                             blocktype: "main-block-blue",
                             header: "The Parthenon 2",
                             description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
-                            image: "./img/parth2018_11.jpg",
-                            caption: "Closeup of capital"
+                            images: [
+                                {
+                                    image: "./img/parth2018_26.jpg",
+                                    caption: "Closeup of capital with upper part of column"
+                                },
+                                {
+                                    image: "./img/parth2018_31.jpg",
+                                    caption: "Closeup of entablature"
+                                }
+
+                            ]
                         },
                         {
                             switch: false,
                             blocktype: "main-block-green",
                             header: "The Parthenon 3",
-                            description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
-                            image: "./img/parth2018_26.jpg",
-                            caption: "Closeup of capital with upper part of column"
+                            description: `DELETE ME: test case for no images.`,
+                            images: [
+                            ]
                         },
-                        {
-                            switch: true,
-                            blocktype: "main-block-red",
-                            header: "The Parthenon 4",
-                            description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
-                            image: "./img/parth2018_31.jpg",
-                            caption: "Closeup of entablature"
-                        }
                     ]
                 },
                 corinthian: {
@@ -157,27 +199,40 @@
                             blocktype: "main-block-blue",
                             header: "Ceiling at Karnak",
                             description: `This is basically just a bonus shot of the columns at KarnaK. almost corinthian looking`,
-                            image: "./img/columns-of-the-hypostyle-hall-of-Karnaks-temple-in-Luxor-Egypt.jpg",
-                            caption: "whoa, awesome ceiling at Karnak!"
-
+                            images: [
+                                {
+                                    image: "./img/columns-of-the-hypostyle-hall-of-Karnaks-temple-in-Luxor-Egypt.jpg",
+                                    caption: "whoa, awesome ceiling at Karnak!"
+                                }
+                            ]
                         },
                         {
                             switch: true,
                             blocktype: "main-block-red",
                             header: "Corinthian capital",
                             description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
-                            image: "./img/corinthian-capital.jpg",
-                            caption: "ancient capital"
-
+                            images: [
+                                {
+                                    image: "./img/corinthian-capital.jpg",
+                                    caption: "ancient capital"
+                                }
+                            ]
                         },
                         {
                             switch: false,
                             blocktype: "main-block-blue",
                             header: "Olympieion at Athens",
                             description: `nec aliquam tortor fermentum et. Phasellus urna arcu, consectetur vel aliquet eget, tempus nec ex. Nullam maximus sapien id iaculis faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis aliquet ut arcu eget egestas. Aenean tristique lectus ullamcorper lacus vestibulum, ac ultrices massa pellentesque. Nam nec viverra tellus. Nam ac ultrices tortor, et ultricies nisi. In fermentum lacus a mi volutpat`,
-                            image: "./img/OlympieionatAthens.jpg",
-                            caption: "temple of olympus?"
-
+                            images: [
+                                {
+                                    image: "./img/OlympieionatAthens.jpg",
+                                    caption: "temple of Olympian Zeus, Athens"
+                                },
+                                {
+                                    image: "img/athens-zeus-temple.jpg",
+                                    caption: "Another view of the Olympieion"
+                                }
+                            ]
                         }
                     ]
                 }
@@ -207,12 +262,29 @@
                 header.innerHTML = entry.header;
                 const description = clone.querySelector(".description p");
                 description.innerHTML = entry.description;
-                const anchor = clone.querySelector(".figure a");
-                anchor.setAttribute("href", entry.image);
-                const image = clone.querySelector(".figure img");
-                image.setAttribute("src", entry.image);
-                const caption = clone.querySelector(".figure small");
-                caption.innerHTML = entry.caption;
+                if (entry.images.length >= 1) {
+                    let anchor = clone.querySelector(".figure a");
+                    anchor.setAttribute("href", entry.images[0].image);
+                    let image = clone.querySelector(".figure img");
+                    image.setAttribute("src", entry.images[0].image);
+                    let caption = clone.querySelector(".figure small");
+                    caption.innerHTML = entry.images[0].caption;
+
+                    for (let i = 1; i < entry.images.length; i++) {
+                        let figure = clone.querySelector(".figure")
+                        let newfig = figure.cloneNode(true);
+                        anchor = newfig.querySelector(".figure a");
+                        anchor.setAttribute("href", entry.images[i].image);
+                        image = newfig.querySelector(".figure img");
+                        image.setAttribute("src", entry.images[i].image);
+                        caption = newfig.querySelector(".figure small");
+                        caption.innerHTML = entry.images[i].caption;
+                        figure.appendChild(newfig);
+                    }
+                } else {
+                    let caption = clone.querySelector(".figure small");
+                    caption.innerHTML = "No images found for this entry.";
+                }
                 if (entry.switch) {
                     clone.querySelector(".description").classList.add("right");
                     clone.querySelector(".figure").classList.add("left");
