@@ -58,10 +58,7 @@
             const entries = {
                 ionic: {
                     preface: "The Ionic Order",
-                    welcome: {
-                        first: "T",
-                        rest: "he Ionic Order is represented by many fine examples still standing today. and it also rules."
-                    },
+                    welcome: "The Ionic Order is represented by many fine examples still standing today. and it also rules.",
                     elist: [
                         {
                             switch: true,
@@ -118,10 +115,7 @@
                 },
                 doric: {
                     preface: "The Doric Order",
-                    welcome: {
-                        first: "T",
-                        rest: "he Doric Order is represented by many fine examples still standing today."
-                    },
+                    welcome: "The Doric Order is represented by many fine examples still standing today.",
                     elist: [
                         {
                             switch: false,
@@ -193,10 +187,7 @@
                 },
                 corinthian: {
                     preface: "The Corinthian Order",
-                    welcome: {
-                        first: "T",
-                        rest: "he Corinthian Order is very flowery. For now I'll just type somethin in leu of lorem ipsum, mainly just to test the layout"
-                    },
+                    welcome: "The Corinthian Order is very flowery. For now I'll just type somethin in leu of lorem ipsum, mainly just to test the layout",
                     elist: [
                         {
                             switch: false,
@@ -252,9 +243,9 @@
                 const t = document.getElementById("order-headers-temp");
                 const clone = document.importNode(t.content, true);
                 const drop = clone.getElementById("dropcap");
-                drop.innerHTML = welcome.first;
+                drop.innerHTML = welcome.trim()[0];
                 const par = clone.querySelector("p");
-                par.appendChild(document.createTextNode(welcome.rest));
+                par.appendChild(document.createTextNode(welcome.trim().slice(1)));
                 display.appendChild(clone);
             }
             const addEntry = (entry) => {
