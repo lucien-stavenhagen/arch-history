@@ -33,7 +33,7 @@ hr {
 }
 
 #menubar #mbcontainer {
-  float: right;
+  display: block;
 }
 
 #menubar #mbcontainer a {
