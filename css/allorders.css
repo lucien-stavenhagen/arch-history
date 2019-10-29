@@ -129,6 +129,18 @@ hr {
   font-size: 1.3rem;
 }
 
+.description::before,
+.description::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 3px;
+  border-radius: 30%;
+  opacity: 0.6;
+  margin: 1.5rem 0;
+  background-color: rgba(15, 61, 88, 0.3);
+}
+
 .figure {
   text-align: center;
 }
