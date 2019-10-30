@@ -1,21 +1,5 @@
-$labelcolor: rgba(15, 61, 88, 0.3);
-$redtrans: rgba(156, 49, 16, 0.05);
-$bluetrans: rgba(16, 72, 156, 0.05);
-$greentrans: rgba(16, 156, 58, 0.05);
-$welcome: rgba(156, 16, 126, 0.05);
-$mainwidth: 85%;
-$gridmargin: 2.5rem;
-$mobilegridmargin: 0.5rem;
-$descriptiondecor: linear-gradient(
-  to right,
-  red,
-  orange,
-  yellow,
-  green,
-  blue,
-  indigo,
-  violet
-);
+@import "colors";
+
 * {
   box-sizing: border-box;
 }
@@ -35,47 +19,64 @@ hr {
   padding: 0;
   height: 260px;
   width: 60px;
+  display: none;
   background-color: $labelcolor;
 }
 #menubar {
-  width: $mainwidth;
-  margin: auto;
+  width: 100%;
   font-size: 0; /* hack to get rid of whitespace text node */
   list-style-type: none;
-
+  background-color: $headerfooter;
   #mbcontainer {
     display: block;
+    width: $mainwidth;
+    margin: 0 auto;
+    .menu-left {
+      float: left;
+    }
+    .menu-right {
+      float: right;
+    }
     a {
       display: inline-block;
       padding: 0.9rem;
       margin: 0 0 0 1px;
-      background-color: #eeeeee;
       font-size: initial;
       text-decoration: none;
       font-family: "Roboto", sans-serif;
+      color: black;
     }
     a:hover {
-      background-color: #cccccc;
+      background-color: $ahover;
+      color: white;
     }
   }
 }
-
+/* clearfix hack, because menu items are floated*/
+#menubar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 #announce {
-  width: $mainwidth;
-  margin: auto;
+  background: $labelcolor;
   padding: 1rem;
 
   #preface {
-    font-size: 4rem;
+    width: $mainwidth;
+    margin: 2rem auto;
+    font-size: 3.5rem;
+    padding: 1rem 0;
     font-weight: 300;
-    display: inline-block;
+    line-height: normal;
+    text-transform: uppercase;
+    display: block;
   }
 }
-
 #welcome {
   width: $mainwidth;
   background-color: $welcome;
-  margin: 6rem auto 2px auto;
+  margin: 0 auto 2px auto;
   padding: 1rem;
   line-height: 2.5rem;
   font-size: 1.5rem;
@@ -88,7 +89,7 @@ hr {
     font-weight: 300;
     line-height: 90%;
     padding: 0 1rem 0 0;
-    color: $labelcolor;
+    color: black;
   }
 
   #boldme {
@@ -175,6 +176,19 @@ hr {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
+
+footer {
+  background-color: $headerfooter;
+  .footer-container {
+    width: $mainwidth;
+    margin: 0 auto;
+    p {
+      text-align: center;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .sidelabel {
     width: 40px;
@@ -219,6 +233,13 @@ hr {
   #menubar {
     #mbcontainer {
       float: none;
+      width: 100%;
+      .menu-left {
+        float: none;
+      }
+      .menu-right {
+        float: none;
+      }
       a {
         display: block;
         text-align: center;
@@ -237,9 +258,9 @@ hr {
   .main-block-green,
   #menubar,
   #welcome {
-    width: 98%;
+    width: 100%;
   }
   #welcome {
-    margin: 1rem auto 2px auto;
+    margin: 0 auto 2px auto;
   }
 }

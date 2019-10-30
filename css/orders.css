@@ -21,11 +21,13 @@ hr {
   padding: 0;
   height: 260px;
   width: 60px;
-  background-color: rgba(15, 61, 88, 0.3);
+  display: none;
+  background-color: rgba(15, 61, 88, 0.1);
 }
 
 #menubar {
-  width: 85%;
+  background-color: #58585841;
+  width: 100%;
   margin: auto;
   font-size: 0;
   /* hack to get rid of whitespace text node */
@@ -34,38 +36,45 @@ hr {
 
 #menubar #mbcontainer {
   display: block;
+  width: 90%;
+  margin: 0 auto;
 }
 
 #menubar #mbcontainer a {
   display: inline-block;
   padding: 0.9rem;
-  margin: 0 0 0 1px;
-  background-color: #eeeeee;
+  margin: 0;
   font-size: initial;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  color: black;
 }
 
 #menubar #mbcontainer a:hover {
-  background-color: #cccccc;
+  background-color: #58585856;
+  color: white;
 }
 
 #announce {
-  width: 85%;
-  margin: auto;
+  background: rgba(15, 61, 88, 0.1);
   padding: 1rem;
 }
 
 #announce #preface {
-  font-size: 4rem;
+  width: 90%;
+  margin: 2rem auto;
+  font-size: 3.5rem;
+  padding: 1rem 0;
   font-weight: 300;
-  display: inline-block;
+  line-height: normal;
+  text-transform: uppercase;
+  display: block;
 }
 
 #welcome {
-  width: 85%;
+  width: 90%;
   background-color: rgba(156, 16, 126, 0.05);
-  margin: 6rem auto 2px auto;
+  margin: 0 auto 2px auto;
   padding: 1rem;
   line-height: 2.5rem;
   font-size: 1.5rem;
@@ -79,7 +88,7 @@ hr {
   font-weight: 300;
   line-height: 90%;
   padding: 0 1rem 0 0;
-  color: rgba(15, 61, 88, 0.3);
+  color: black;
 }
 
 #welcome #boldme {
@@ -89,7 +98,7 @@ hr {
 .main-block-doric,
 .main-block-ionic,
 .main-block-corinthian {
-  width: 85%;
+  width: 90%;
   margin: auto;
   display: -ms-grid;
   display: grid;
@@ -162,6 +171,21 @@ hr {
   z-index: -1;
 }
 
+footer {
+  background-color: #58585841;
+}
+
+footer .footer-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer .footer-container p {
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+
 @media screen and (max-width: 768px) {
   .sidelabel {
     width: 40px;
@@ -192,11 +216,12 @@ hr {
 @media (max-width: 600px) {
   #menubar #mbcontainer {
     float: none;
+    width: 100%;
   }
   #menubar #mbcontainer a {
     display: block;
     text-align: center;
-    margin: 0 0 1px 0;
+    margin: 0;
   }
   .sidelabel {
     display: none;
@@ -209,10 +234,10 @@ hr {
   .main-block-corinthian,
   #menubar,
   #welcome {
-    width: 98%;
+    width: 100%;
   }
   #welcome {
-    margin: 1rem auto 2px auto;
+    margin: 0 auto 2px auto;
   }
 }
 /*# sourceMappingURL=orders.css.map */

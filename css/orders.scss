@@ -1,9 +1,4 @@
-$labelcolor: rgba(15, 61, 88, 0.3);
-$doric: rgba(156, 49, 16, 0.05);
-$ionic: rgba(16, 72, 156, 0.05);
-$corinthian: rgba(16, 156, 58, 0.05);
-$welcome: rgba(156, 16, 126, 0.05);
-$mainwidth: 85%;
+@import "colors";
 
 @mixin shade($shade) {
   background-color: $shade;
@@ -30,47 +25,56 @@ hr {
   padding: 0;
   height: 260px;
   width: 60px;
+  display: none;
   background-color: $labelcolor;
 }
 #menubar {
-  @include label-width($mainwidth);
+  //  @include label-width($mainwidth);
+  background-color: $headerfooter;
+  width: 100%;
   margin: auto;
   font-size: 0; /* hack to get rid of whitespace text node */
   list-style-type: none;
-
   #mbcontainer {
     display: block;
+    @include label-width($mainwidth);
+    margin: 0 auto;
     a {
       display: inline-block;
       padding: 0.9rem;
-      margin: 0 0 0 1px;
-      background-color: #eeeeee;
+      margin: 0;
       font-size: initial;
       text-decoration: none;
       font-family: "Roboto", sans-serif;
+      color: black;
     }
     a:hover {
-      background-color: #cccccc;
+      background-color: $ahover;
+      color: white;
     }
   }
 }
 
 #announce {
-  @include label-width($mainwidth);
-  margin: auto;
+  background: $labelcolor;
   padding: 1rem;
 
   #preface {
-    font-size: 4rem;
+    @include label-width($mainwidth);
+    margin: 2rem auto;
+    font-size: 3.5rem;
+    padding: 1rem 0;
     font-weight: 300;
-    display: inline-block;
+    line-height: normal;
+    text-transform: uppercase;
+    display: block;
   }
 }
 
 #welcome {
   @include label-width($mainwidth);
   @include shade($welcome);
-  margin: 6rem auto 2px auto;
+  margin: 0 auto 2px auto;
   padding: 1rem;
   line-height: 2.5rem;
   font-size: 1.5rem;
@@ -83,7 +87,7 @@ hr {
     font-weight: 300;
     line-height: 90%;
     padding: 0 1rem 0 0;
-    color: $labelcolor;
+    color: black;
   }
 
   #boldme {
@@ -153,6 +157,18 @@ hr {
     z-index: -1;
   }
 }
+footer {
+  background-color: $headerfooter;
+  .footer-container {
+    width: $mainwidth;
+    margin: 0 auto;
+    p {
+      text-align: center;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+}
 
 @media screen and (max-width: 768px) {
   .sidelabel {
@@ -185,10 +201,11 @@ hr {
   #menubar {
     #mbcontainer {
       float: none;
+      width: 100%;
       a {
         display: block;
         text-align: center;
-        margin: 0 0 1px 0;
+        margin: 0;
       }
     }
   }
@@ -203,9 +220,9 @@ hr {
   .main-block-corinthian,
   #menubar,
   #welcome {
-    width: 98%;
+    width: 100%;
   }
   #welcome {
-    margin: 1rem auto 2px auto;
+    margin: 0 auto 2px auto;
   }
 }
