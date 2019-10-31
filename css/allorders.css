@@ -159,9 +159,10 @@ hr {
   width: 90%;
   height: 3px;
   border-radius: 30%;
-  opacity: 0.6;
+  opacity: 0.2;
   margin: 1.5rem 0;
-  background-color: rgba(15, 61, 88, 0.1);
+  background-image: -webkit-gradient(linear, left top, right top, from(lime), color-stop(blue), to(red));
+  background-image: linear-gradient(to right, lime, blue, red);
 }
 
 .figure {
